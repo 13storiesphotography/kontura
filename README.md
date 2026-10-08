@@ -16,7 +16,6 @@ Persönlicher Finanzüberblick mit AI — sicher, PSD2-ready, iOS-tauglich (PWA)
 ## Lokal starten
 
 ```bash
-cd finanz-ai
 cp .env.example .env.local
 npm install
 npm run dev
@@ -30,6 +29,8 @@ Optional:
 - Supabase-URL/Key + Migration `supabase/migrations/20261008140000_kontura_finance.sql`
 - Open-Banking-Env wenn AISP-Credentials da sind
 
+Deploy / Env: [docs/DEPLOY.md](./docs/DEPLOY.md).
+
 ## Sicherheit (Grundsätze)
 
 1. Kein Scraping von Online-Banking-Passwörtern
@@ -37,15 +38,6 @@ Optional:
 3. AI sieht nur aggregierte Snapshots, keine PINs/TANs
 4. Tokens verschlüsselt serverseitig (Schema vorbereitet)
 5. iOS: PWA jetzt; native Shell + Face ID als nächster Schritt
-
-## Eigenes Repo
-
-```bash
-# vom Peugeot-Root:
-chmod +x finanz-ai/scripts/extract-kontura-repo.sh
-./finanz-ai/scripts/extract-kontura-repo.sh
-# danach gh repo create + Push laut Script-Ausgabe
-```
 
 ## finAPI Sandbox
 
