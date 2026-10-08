@@ -12,14 +12,16 @@ Kontura nutzt **finAPI Access + Web Form 2.0** (PSD2). Bank-Logins und SCA laufe
 
 ## 2. Env setzen
 
-In `finanz-ai/.env.local`:
+In `.env.local` (lokal) bzw. Vercel Env (Deploy):
 
 ```bash
 OPEN_BANKING_ENABLED=true
+FINAPI_ENABLED=true
 FINAPI_ENV=sandbox
 FINAPI_CLIENT_ID=...
 FINAPI_CLIENT_SECRET=...
-FINAPI_CALLBACK_URL=http://localhost:3001/api/banking/callback
+FINAPI_CALLBACK_URL=http://localhost:3000/api/banking/callback
+# Prod: https://<projekt>.vercel.app/api/banking/callback
 KONTURA_VAULT_KEY=mindestens-16-zeichen-geheim
 ```
 

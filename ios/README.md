@@ -24,6 +24,7 @@ Native SwiftUI-Hülle um die Kontura-Web-App:
 ## Lokal mit Dev-Server
 
 ```bash
-cd finanz-ai && npm run dev -- --port 3001
+npm run dev -- --port 3001
 # Info.plist: KonturaServerURL = http://<dein-mac-lan-ip>:3001
+# Production: https://<dein-vercel-projekt>.vercel.app
 ```
